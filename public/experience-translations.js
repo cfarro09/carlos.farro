@@ -14,3 +14,11 @@ Object.assign(english,{
  'Registra el medidor, la lectura y la evidencia.':'Records the meter, reading and evidence.','Conserva información en el dispositivo.':'Keeps information on the device.','Gestiona el intercambio de datos y su estado.':'Manages data exchange and its status.','Integra la información con los servicios de la plataforma.':'Integrates information with platform services.',
  'Recibe el contacto desde un canal digital.':'Receives contact through a digital channel.','Organiza los pasos de la conversación.':'Organizes the steps in the conversation.','Integra capacidades de asistencia inteligente.':'Integrates intelligent assistance capabilities.','Conecta la experiencia con las personas del equipo.':'Connects the experience with the support team.'
 });
+
+Object.assign(english, {
+ 'Conoce a Carlos Farro':'Meet Carlos Farro',
+ 'Retrato de Carlos Farro':'Portrait of Carlos Farro',
+ 'COMPROBANTE':'INVOICE',
+ 'GUÍA DE REMISIÓN':'DISPATCH GUIDE',
+ 'Desarrollo e integración de facturación electrónica para SUNAT mediante OpenFact, con facturas, boletas, notas de crédito y débito, y gestión de guías de remisión y transportistas.':'Developed and integrated electronic invoicing for SUNAT through OpenFact, covering invoices, sales receipts, credit and debit notes, and dispatch guide and carrier management.'
+});

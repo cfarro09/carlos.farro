@@ -11,6 +11,8 @@ let visibleProjects = [];
 function illustration(project) {
   const common = '<div class="mini-chrome"><i></i><i></i><i></i><span>WORKSPACE</span></div>';
   const drawings = {
+    billing:'<div class="mini-billing"><div class="billing-document"><span>COMPROBANTE</span><b>≡</b><div><i></i><i></i><i></i></div><small>PDF · XML · CDR</small></div><div class="billing-connection"><span>GUÍA DE REMISIÓN</span><b>↔</b><span>OPENFACT → SUNAT</span></div></div>',
+
     printing:'<div class="mini-print"><div class="mini-qr">▦</div><div><b>ETIQUETA QR</b><span>ORDEN → ESTACIÓN</span><em>LISTA PARA IMPRIMIR</em></div></div><div class="mini-progress"><i></i></div>',
     field:'<div class="mini-phone"><span>LECTURA DE MEDIDOR</span><b>0 1 2 8 4</b><div class="mini-photo">＋ EVIDENCIA</div><em>↻ Sincronización</em></div><div class="mini-pin">⌖</div>',
     people:'<div class="mini-table"><span>COLABORADOR</span><span>CONTRATO</span><b>● Equipo A</b><em>Vigente</em><b>● Equipo B</b><em>En revisión</em><b>● Equipo C</b><em>Vigente</em></div>',
@@ -97,8 +99,6 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('main section[id]').forEach(section=>observer.observe(section));
 document.querySelector('#year').textContent=new Date().getFullYear();
 renderProjects();
-const portraitPath=null;
-if(portraitPath){const portrait=new Image();portrait.alt='Carlos Farro';portrait.onload=()=>document.querySelector('.profile-monogram').replaceWith(portrait);portrait.src=portraitPath;}
 document.querySelector('#print-cv').addEventListener('click',()=>window.print());
 document.addEventListener('languagechange',()=>{
   const focusedProject=previousFocus?.dataset.project;
