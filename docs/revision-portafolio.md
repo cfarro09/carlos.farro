@@ -1,5 +1,17 @@
 # Revisión para el portafolio
 
+## Versión bilingüe
+
+Inglés predeterminado, español seleccionable y preferencia persistente. Traducción de navegación, presentación, 12 casos, fichas, capacidades, ilustraciones, servicios, CV, formularios, estados y accesibilidad. Búsqueda bilingüe; los borradores del visitante se conservan. Comprobados en navegador: inglés inicial, cambio a español, persistencia tras recarga, filtro Operations con tres casos, búsqueda labels, ficha de impresión en inglés, selección de servicio y conservación de texto introducido. Revisada la vista móvil de 390 px sin desbordamiento. Comprobación de sintaxis de los seis scripts y cobertura de los campos textuales de los 12 proyectos sin traducciones faltantes.
+
+## Actualización del cargo actual
+
+El usuario confirmó Arquitecto de Software de las soluciones de Laraigo desde septiembre de 2025 y que mantiene el liderazgo de área. Se presentan como funciones simultáneas: arquitectura, septiembre 2025–actualidad; liderazgo de área/técnico, 2022–actualidad. Presentación, perfil y trayectoria reflejan ambos roles; no se inventan responsabilidades nuevas.
+
+## CV integrado en la SPA
+
+Se incorporó `#cv` con cinco etapas profesionales, proyectos independientes, formación, cursos y competencias del CV original. El usuario confirmó expresamente que el cargo «Líder técnico en VCA Perú, 2022–actualidad» sigue vigente. No se inventaron métricas de resultados ni se extendieron otros períodos laborales. Se añadieron accesos desde menú y portada, y estilos de impresión solo para el CV. Comprobados cinco registros de experiencia, navegación y ausencia de desbordamiento horizontal a 390 px. El comando de impresión usa el diálogo del navegador; no se generó un PDF final en esta tarea.
+
 ## Segunda revisión: catálogo ampliado
 
 Se amplió la SPA de 6 a 12 casos. Se mantuvo la instrucción de anonimizar proyectos de trabajo y clientes, incluso cuando un repositorio sea público. Las referencias siguientes son internas y este documento no se sirve desde el sitio.

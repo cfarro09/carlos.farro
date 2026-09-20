@@ -26,7 +26,10 @@ function illustration(project) {
 }
 function renderProjects() {
   const query = normalize(search.value.trim());
-  const matches = project => normalize([project.title,project.description,project.sector,...project.tags,...project.capabilities].join(' ')).includes(query);
+  const matches = project => {
+    const phrases=[project.title,project.description,project.sector,...project.tags,...project.capabilities];
+    return normalize([...phrases,...phrases.map(phrase=>i18n.t(phrase,'en'))].join(' ')).includes(query);
+  };
   visibleProjects = projects.filter(project => matches(project) && (activeFilter === 'todos' || project.category === activeFilter));
   filterButtons.forEach(button => {
     const filter = button.dataset.filter;
@@ -36,9 +39,15 @@ function renderProjects() {
     button.setAttribute('aria-pressed', String(filter === activeFilter));
   });
   grid.innerHTML = visibleProjects.map(project => `<article class="project">${illustration(project)}<div class="project-body"><div class="project-kicker">${escapeHtml(project.label)}</div><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.description)}</p><ul class="card-capabilities">${project.capabilities.slice(0,2).map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul><div class="tags">${project.tags.map(tag=>`<span>${escapeHtml(tag)}</span>`).join('')}</div><button data-project="${project.id}" aria-label="Ver caso: ${escapeHtml(project.title)}">Conocer la solución <span>↗</span></button></div></article>`).join('');
-  document.querySelector('#filter-status').textContent = `${visibleProjects.length} de ${projects.length} proyectos${query ? ` · “${search.value.trim()}”` : ''}`;
+  document.querySelector('#filter-status').textContent = `${visibleProjects.length} ${i18n.language==='en'?'of':'de'} ${projects.length} ${i18n.language==='en'?'projects':'proyectos'}${query ? ` · “${search.value.trim()}”` : ''}`;
   document.querySelector('#empty-state').hidden = visibleProjects.length !== 0;
   document.querySelector('#clear-search').hidden = !search.value;
+  i18n.apply(grid);
+  i18n.apply(document.querySelector('.filters'));
+  grid.querySelectorAll('[data-project]').forEach(button=>{
+    const project=projects.find(item=>item.id===button.dataset.project);
+    button.setAttribute('aria-label',`${i18n.language==='en'?'View case':'Ver caso'}: ${i18n.t(project.title)}`);
+  });
 }
 filterButtons.forEach(button=>button.addEventListener('click',()=>{activeFilter=button.dataset.filter;renderProjects();}));
 search.addEventListener('input',renderProjects);
@@ -53,6 +62,7 @@ function showProject(project) {
   document.querySelector('#next-project').hidden=visibleProjects.length<2;
   if(!dialog.open){dialog.showModal();document.body.classList.add('dialog-open');}
   dialog.scrollTop=0;
+  i18n.apply(dialog);
 }
 grid.addEventListener('click',event=>{const button=event.target.closest('[data-project]');if(!button)return;previousFocus=button;showProject(projects.find(project=>project.id===button.dataset.project));});
 document.querySelector('#next-project').addEventListener('click',()=>{const index=visibleProjects.indexOf(activeProject);showProject(visibleProjects[(index+1)%visibleProjects.length]);document.querySelector('.close-dialog').focus();});
@@ -63,7 +73,7 @@ dialog.addEventListener('close',()=>{document.body.classList.remove('dialog-open
 document.querySelector('#dialog-contact').addEventListener('click',()=>{
   document.querySelector('#service').value=activeProject.service;
   const message=document.querySelector('#message');
-  if(!message.value.trim())message.value=`Me interesa una solución similar a “${activeProject.title}”. Mi proyecto consiste en: `;
+  if(!message.value.trim())message.value=i18n.language==='en'?`I am interested in a solution similar to “${i18n.t(activeProject.title)}”. My project involves: `:`Me interesa una solución similar a “${activeProject.title}”. Mi proyecto consiste en: `;
   contactFromDialog=true;dialog.close();
 });
 const menu=document.querySelector('.menu-toggle');
@@ -76,14 +86,24 @@ document.querySelectorAll('[data-service]').forEach(link=>link.addEventListener(
 document.querySelector('#contact-form').addEventListener('submit',event=>{
   event.preventDefault();
   const data=new FormData(event.currentTarget);
-  const body=`Hola Carlos, soy ${String(data.get('name')).trim()}.\n\nMe interesa: ${data.get('service')}.\n\n${String(data.get('message')).trim()}\n`;
-  window.location.href=`mailto:fdcarlosd1@gmail.com?subject=${encodeURIComponent(`Proyecto: ${data.get('service')}`)}&body=${encodeURIComponent(body)}`;
+  const service=i18n.t(data.get('service'));
+  const body=i18n.language==='en'?`Hi Carlos, I am ${String(data.get('name')).trim()}.\n\nI am interested in: ${service}.\n\n${String(data.get('message')).trim()}\n`:`Hola Carlos, soy ${String(data.get('name')).trim()}.\n\nMe interesa: ${service}.\n\n${String(data.get('message')).trim()}\n`;
+  window.location.href=`mailto:fdcarlosd1@gmail.com?subject=${encodeURIComponent(`${i18n.language==='en'?'Project':'Proyecto'}: ${service}`)}&body=${encodeURIComponent(body)}`;
   document.querySelector('#form-status').textContent='Mensaje preparado para tu aplicación de correo. Si no se abre, copia mi correo y escríbeme directamente.';
+  i18n.apply(document.querySelector('#form-status'));
 });
-document.querySelector('#copy-email').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('fdcarlosd1@gmail.com');document.querySelector('#form-status').textContent='Correo copiado: fdcarlosd1@gmail.com';}catch{document.querySelector('#form-status').textContent='Puedes copiar este correo: fdcarlosd1@gmail.com';}});
+document.querySelector('#copy-email').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('fdcarlosd1@gmail.com');document.querySelector('#form-status').textContent='Correo copiado: fdcarlosd1@gmail.com';}catch{document.querySelector('#form-status').textContent='Puedes copiar este correo: fdcarlosd1@gmail.com';}i18n.apply(document.querySelector('#form-status'));});
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navigation.querySelectorAll('a').forEach(link=>{if(link.hash===`#${entry.target.id}`)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}}),{rootMargin:'-15% 0px -60% 0px'});
 document.querySelectorAll('main section[id]').forEach(section=>observer.observe(section));
 document.querySelector('#year').textContent=new Date().getFullYear();
 renderProjects();
 const portraitPath=null;
 if(portraitPath){const portrait=new Image();portrait.alt='Carlos Farro';portrait.onload=()=>document.querySelector('.profile-monogram').replaceWith(portrait);portrait.src=portraitPath;}
+document.querySelector('#print-cv').addEventListener('click',()=>window.print());
+document.addEventListener('languagechange',()=>{
+  const focusedProject=previousFocus?.dataset.project;
+  renderProjects();
+  if(focusedProject)previousFocus=grid.querySelector(`[data-project="${focusedProject}"]`);
+  if(dialog.open){const scroll=dialog.scrollTop;showProject(activeProject);dialog.scrollTop=scroll;}
+});
+i18n.setLanguage(i18n.language,false);
