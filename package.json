@@ -3,5 +3,5 @@
   "version": "1.0.0",
   "private": true,
   "description": "Portafolio SPA de Carlos Farro",
-  "scripts": { "start": "node server.mjs", "check": "node --check public/projects-data.js && node --check public/projects-extra.js && node --check public/translations.js && node --check public/project-translations.js && node --check public/i18n.js && node --check public/app.js" }
+  "scripts": { "start": "node server.mjs", "check": "node --check public/projects-data.js && node --check public/projects-extra.js && node --check public/translations.js && node --check public/project-translations.js && node --check public/experience-translations.js && node --check public/i18n.js && node --check public/app.js && node --check public/experience.js" }
 }

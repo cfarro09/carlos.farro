@@ -32,6 +32,12 @@ La SPA abre en inglés por defecto. El selector EN / ES guarda la preferencia en
 
 ## Contenido del CV
 
+## Experiencia y dominio
+
+La portada incluye un explorador interactivo de tres escenarios: operaciones, trabajo de campo y atención. Cada escenario conecta un flujo ilustrativo, una decisión de arquitectura y el caso correspondiente del catálogo. Admite teclado y respeta la preferencia de movimiento reducido. `experience.css`, `experience.js` y `experience-translations.js` contienen esta experiencia.
+
+IAMA aparece junto al contacto como marca cofundada por Carlos y respaldo para trabajar con facturación. El dominio previsto es `https://carlos.farro.iama.pe/`, configurado en canonical, Open Graph, robots y sitemap. El despliegue debe servir la carpeta `public` con HTTPS; no se ha publicado ni configurado DNS desde este proyecto.
+
 La sección `#cv` incluye trayectoria cronológica, perfil, formación, cursos y competencias a partir del CV suministrado. El usuario confirmó funciones simultáneas: Arquitecto de Software de las soluciones de Laraigo desde septiembre de 2025 y liderazgo de área/técnico desde 2022, ambos vigentes. Los nombres de empleadores aparecen en la trayectoria; los casos de clientes siguen anónimos.
 
 El botón «Imprimir / guardar CV» abre la impresión nativa del navegador. `public/cv.css` contiene estilos A4 que imprimen solo el CV con tipografía convencional y fondo blanco. Elegir «Guardar como PDF» para obtener un archivo; no hay un PDF pre-generado ni se publica el CV original con su domicilio.
