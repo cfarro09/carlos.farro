@@ -29,6 +29,10 @@ Object.assign(english, {'Participación de apoyo en proyectos de chatbots del se
 
 Object.assign(english, {
  'Clientes':'Clients',
+ 'GESTIÓN EMPRESARIAL':'BUSINESS MANAGEMENT',
+ 'ÚLTIMA MILLA':'LAST-MILE LOGISTICS',
+ 'Ventas, inventario y seguimiento de equipos.':'Sales, inventory and team tracking.',
+ 'Backoffice y aplicaciones para la gestión de entregas.':'Backoffice and applications for delivery management.',
  'EXPERIENCIA CON NOMBRE PROPIO':'THE ORGANIZATIONS BEHIND THE WORK',
  'Clientes y':'Clients &',
  'colaboraciones.':'collaborations.',
@@ -50,4 +54,13 @@ Object.assign(english, {
  'de la conversación.':'the conversation.',
  'Participación de apoyo en el chatbot Sofía.':'Contributed in a supporting role to the Sofía chatbot.',
  'Soporte técnico a una colaboración externa en el chatbot Rufo.':'Technical support for an external collaboration on the Rufo chatbot.'
+});
+
+Object.assign(english, {
+ 'Integraciones Odoo':'Odoo integrations',
+ 'Conecta Odoo con tus aplicaciones y procesos de mantenimiento. APIs para equipos, órdenes de trabajo, recursos y evidencias.':'Connect Odoo with your applications and maintenance workflows. APIs for equipment, work orders, resources and evidence.',
+ 'Hablemos de tu proyecto Odoo ↗':'Let’s discuss your Odoo project ↗',
+ 'Odoo e integraciones':'Odoo and integrations',
+ 'Python, FastAPI, XML-RPC y gestión de activos y mantenimiento':'Python, FastAPI, XML-RPC, asset and maintenance management',
+ 'ACTIVOS · ÓRDENES · EVIDENCIAS':'ASSETS · WORK ORDERS · EVIDENCE'
 });

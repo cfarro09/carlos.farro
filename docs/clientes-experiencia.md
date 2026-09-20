@@ -12,10 +12,12 @@ Inventario interno, fuera del sitio público. Actualizado a partir de la lista s
 | SUNAT | Chatbot Sofía | Carlos confirmó participación de apoyo en el chatbot Sofía. Es una experiencia distinta de la integración tributaria de Praxis. No se atribuye desarrollo completo ni una contratación directa no confirmada. |
 | OEFA | Chatbot Rufo | Carlos confirmó soporte técnico de su parte al trabajo de apoyo realizado por su esposa. Participación indirecta; no se presenta como cliente directo ni como desarrollo completo de Carlos. |
 | Laraigo | Plataforma omnicanal y portal de ingeniería | Experiencia laboral de arquitectura y liderazgo ya confirmada. Carlos también la incluye en su lista freelance; falta distinguir el encargo independiente. |
+| Rintisa | api_rintisa y aplicaciones de gestión | Carlos confirmó su inclusión pública como cliente. Gestión empresarial: ventas, inventario y seguimiento de equipos. |
+| Qayarix | client-qayarix | Carlos confirmó su inclusión pública como cliente. Backoffice y aplicaciones para logística de última milla. |
 
 ## Otras referencias por confirmar
 
-Rintisa (api_rintisa), Eterna (eterna-fronted), Ochoa (erpochoa) y Qayarix (client-qayarix) aparecen en los proyectos previamente revisados. No se afirman como clientes freelance confirmados ni se publican sus nombres. Pueden ser productos, clientes finales o trabajos realizados mediante otra empresa.
+Eterna (eterna-fronted) y Ochoa (erpochoa) aparecen en los proyectos previamente revisados. No se afirman como clientes freelance confirmados ni se publican sus nombres. Pueden ser productos, clientes finales o trabajos realizados mediante otra empresa. Rintisa y Qayarix fueron confirmados posteriormente por Carlos y ya aparecen en la sección pública.
 
 VCA Perú, Bitinka, Gobierno Regional de Ica e I.S.T.P. Nuestra Señora del Carmen figuran como experiencia laboral en el CV, no como nuevos clientes freelance.
 
