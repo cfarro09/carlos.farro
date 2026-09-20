@@ -10,7 +10,7 @@ Publicar únicamente la carpeta `public/` en cualquier hosting estático. No hay
 
 ## Contenido
 
-- Proyectos y descripciones: `public/app.js`.
+- Catálogo original: `public/projects-data.js`; ampliación y capacidades: `public/projects-extra.js`; interacciones: `public/app.js`.
 - Presentación, servicios, formación y contacto: `public/index.html`.
 - Diseño responsive, accesibilidad y movimiento reducido: `public/styles.css`.
 - Foto: colocar el archivo original en `public/assets/carlos-farro.jpg` y asignar `portraitPath = 'assets/carlos-farro.jpg'` en `public/app.js`. Mientras no exista, se muestran las iniciales CF. No se ha generado una cara sustituta.
@@ -19,3 +19,5 @@ Publicar únicamente la carpeta `public/` en cualquier hosting estático. No hay
 - Pixelify Sans se sirve localmente con su licencia OFL incluida.
 
 La revisión de contenido está en `docs/revision-portafolio.md`. Confirmar vigencia de formación, aportes y contacto antes de publicar. No se ha desplegado ni publicado ningún repositorio.
+
+La segunda versión incluye 12 casos, búsqueda, filtros con contadores, fichas con flujos, navegación entre casos y consulta contextual. Los componentes de impresión se presentan como un único caso operativo. Las vistas de las tarjetas son ilustraciones de interfaz, no capturas de clientes.

@@ -1,5 +1,39 @@
 # Revisión para el portafolio
 
+## Segunda revisión: catálogo ampliado
+
+Se amplió la SPA de 6 a 12 casos. Se mantuvo la instrucción de anonimizar proyectos de trabajo y clientes, incluso cuando un repositorio sea público. Las referencias siguientes son internas y este documento no se sirve desde el sitio.
+
+| Caso agregado | Repositorios / archivos contrastados | Alcance confirmado |
+| --- | --- | --- |
+| Del almacén a la etiqueta | cfarro09/printing-agent (checkout local, README); GabbrM/stickers-web-app (árbol remoto y Controllers/SupervisorController.cs) | Impresión local, QR, estaciones, historial y aprobación de reimpresiones a través de SignalR. Se presenta como una solución con dos componentes, no dos proyectos inflados. |
+| Lecturas desde el terreno | cfarro09/PetroPeruApp: árbol, model/Reading.kt y manage/ManageReadingActivity.kt | Android/Kotlin, lecturas, fotos, observaciones, mapas y modelo local Room. No se afirma un despliegue vigente o una cifra de usuarios. |
+| Equipos y contratos, conectados | cfarro09/segelimperu: application/controllers/Personal.php y Contratos.php | Personal, asistencia, fichas PDF, renovaciones e historial contractual. |
+| Ventas con visión de negocio | cfarro09/erpochoa: estructura de archivos | Ventas, compras, kardex, proformas, cuentas y stock por sucursal identificados en módulos. No se ejecutó el ERP ni se auditó cada flujo. |
+| Tu negocio, bien presentado | cfarro09/eterna-fronted: index.html | Presentación de marca, categorías y atención al cliente. Representa experiencia en sitios comerciales; no se atribuyen mejoras de conversión no medidas. |
+| Cada expediente, bajo control | cfarro09/sistema-trazabilidad: estructura y README | Gestión documental, hitos, servicios, experiencia y expedientes PDF. Capacidades documentadas, no pruebas de producción. |
+
+También se revisó el README de nery-fernandez; se dejó fuera del catálogo por ahora para mantener el foco comercial solicitado. La lectura remota de tourscixpro/index.html devolvió 404: no se utilizó como evidencia de funcionalidades.
+
+### Experiencia de usuario
+
+- Búsqueda por problema, sector, capacidad y tecnología, sin distinguir acentos o mayúsculas.
+- Seis filtros con contadores actualizados según la búsqueda; estado vacío con recuperación en una acción.
+- 12 casos visibles por defecto; el catálogo no esconde el resto tras un límite de seis.
+- Ilustraciones específicas para impresión, app de campo, personal, ventas, landing, documentos, chat, rutas, flujos y agenda. Se rotulan como vistas conceptuales.
+- Fichas con problema, aporte, capacidades, flujo y tecnología; siguiente caso dentro del filtro actual.
+- Paso de caso a contacto que selecciona el servicio y propone contexto sin sobrescribir un mensaje ya escrito.
+- Servicios explícitos de landing y gestión de operaciones; opción de copiar correo.
+- Controles táctiles, menú móvil, navegación por teclado, devolución de foco y movimiento reducido.
+
+### Observación de repositorios
+
+El README público de sistema-trazabilidad contiene una cadena de conexión con una contraseña aparente. No se copió a la SPA ni se intentó usarla. Conviene revisar su vigencia, rotarla si corresponde y retirar ese contenido del repositorio y su historial. Esto es un hallazgo de lectura, no una auditoría de secretos completa.
+
+### Validación de la segunda versión
+
+Verificados en navegador: 12 casos iniciales; búsqueda de etiquetas; filtro Operaciones con 3 casos; búsqueda sin resultados y restablecimiento; apertura de ficha; siguiente caso dentro del filtro; cierre por Escape; paso a contacto con servicio y contexto; vista móvil de 390 px sin desbordamiento horizontal. Sintaxis de los tres archivos JavaScript verificada. Ningún correo enviado ni despliegue ejecutado.
+
 Fecha: 2026-09-20. Objetivo: atraer clientes freelance con una SPA arcade vintage.
 
 ## Alcance y evidencia
