@@ -1,0 +1,7 @@
+{
+  "name": "carlos-farro-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portafolio SPA de Carlos Farro",
+  "scripts": { "start": "node server.mjs", "check": "node --check public/app.js" }
+}
