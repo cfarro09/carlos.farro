@@ -11,6 +11,8 @@ let visibleProjects = [];
 function illustration(project) {
   const common = '<div class="mini-chrome"><i></i><i></i><i></i><span>WORKSPACE</span></div>';
   const drawings = {
+    school:'<div class="mini-school"><div><strong>HORARIO ACADÉMICO</strong><span>DOCENTE / SECCIÓN</span></div><div class="school-week"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>EXCEL / PDF ↗</small></div>',
+
     billing:'<div class="mini-billing"><div class="billing-document"><span>COMPROBANTE</span><b>≡</b><div><i></i><i></i><i></i></div><small>PDF · XML · CDR</small></div><div class="billing-connection"><span>GUÍA DE REMISIÓN</span><b>↔</b><span>OPENFACT → SUNAT</span></div></div>',
 
     printing:'<div class="mini-print"><div class="mini-qr">▦</div><div><b>ETIQUETA QR</b><span>ORDEN → ESTACIÓN</span><em>LISTA PARA IMPRIMIR</em></div></div><div class="mini-progress"><i></i></div>',

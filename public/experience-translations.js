@@ -22,3 +22,32 @@ Object.assign(english, {
  'GUÍA DE REMISIÓN':'DISPATCH GUIDE',
  'Desarrollo e integración de facturación electrónica para SUNAT mediante OpenFact, con facturas, boletas, notas de crédito y débito, y gestión de guías de remisión y transportistas.':'Developed and integrated electronic invoicing for SUNAT through OpenFact, covering invoices, sales receipts, credit and debit notes, and dispatch guide and carrier management.'
 });
+
+Object.assign(english, {'HORARIO ACADÉMICO':'SCHOOL TIMETABLE','DOCENTE / SECCIÓN':'TEACHER / CLASS GROUP'});
+
+Object.assign(english, {'Participación de apoyo en proyectos de chatbots del sector público, incluyendo soporte técnico a una colaboración externa.':'Contributed to public-sector chatbot projects in a supporting role, including technical support for an external collaboration.'});
+
+Object.assign(english, {
+ 'Clientes':'Clients',
+ 'EXPERIENCIA CON NOMBRE PROPIO':'THE ORGANIZATIONS BEHIND THE WORK',
+ 'Clientes y':'Clients &',
+ 'colaboraciones.':'collaborations.',
+ 'Organizaciones para las que he desarrollado soluciones o aportado experiencia técnica.':'Organizations I have built solutions for or supported with technical expertise.',
+ 'EDUCACIÓN':'EDUCATION',
+ 'OPERACIONES':'OPERATIONS',
+ 'FACTURACIÓN':'INVOICING',
+ 'PERSONAL':'STAFF MANAGEMENT',
+ 'TRABAJO DE CAMPO':'FIELD WORK',
+ 'ARQUITECTURA Y LIDERAZGO':'ARCHITECTURE & LEADERSHIP',
+ 'Gestión académica, horarios y asistencia.':'Academic management, timetables and attendance.',
+ 'Portal operativo e integración de impresión de etiquetas.':'Operations portal and label printing integration.',
+ 'Comprobantes electrónicos y gestión de guías.':'Electronic invoicing and dispatch guide management.',
+ 'Gestión de personal, asistencia y contratos.':'Staff, attendance and contract management.',
+ 'Aplicación móvil para lecturas y evidencias.':'Mobile application for field readings and evidence.',
+ 'Arquitectura de soluciones y liderazgo de área.':'Solution architecture and department leadership.',
+ 'APOYO ESPECIALIZADO':'SPECIALIST SUPPORT',
+ 'También detrás':'Also behind',
+ 'de la conversación.':'the conversation.',
+ 'Participación de apoyo en el chatbot Sofía.':'Contributed in a supporting role to the Sofía chatbot.',
+ 'Soporte técnico a una colaboración externa en el chatbot Rufo.':'Technical support for an external collaboration on the Rufo chatbot.'
+});
